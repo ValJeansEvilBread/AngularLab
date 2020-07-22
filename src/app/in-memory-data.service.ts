@@ -10,6 +10,12 @@ export class InMemoryDataService implements InMemoryDbService {
 	    const people = [
 	      { id: 1111, name: 'Robin Banks' },
 	      { id: 1112, name: 'Sasha Paine' },
+	      { id: 1113, name: 'Noah Guy' },
+	      { id: 1114, name: 'Joe King' },
+	      { id: 1115, name: 'Don Sirley-Light' },
+	      { id: 1116, name: 'Hue Knowse' },
+
+
 	    ];
 	    return {people};
   	}

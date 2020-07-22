@@ -1,4 +1,12 @@
-<label>
-  Name:
-  <input type="text" [formControl]="name">
-</label>
+
+<form [formGroup]="profileForm"  (ngSubmit)="onSubmit()">
+	<label>
+	  Name:
+	  <input type="text" formControlName="name" required>
+	</label>
+	<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<p>
+  <button (click)="updatePerson()">Update Name</button>
+</p>

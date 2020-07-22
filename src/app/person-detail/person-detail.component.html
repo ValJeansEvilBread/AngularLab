@@ -1,10 +1,9 @@
 
 <div *ngIf="person">
-  <h2>{{person.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{person.id}}</div>
+  <h2>{{person.name | uppercase}}</h2>
+  <div><span>ID: </span>{{person.id}}</div>
   <div>
     <app-person-editor></app-person-editor>
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
 </div>
+

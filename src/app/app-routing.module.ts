@@ -6,6 +6,8 @@ import { PeopleComponent} from './people/people.component';
 import { CompBobComponent} from './comp-bob/comp-bob.component';
 import { CompJoeComponent} from './comp-joe/comp-joe.component';
 import { PersonDetailComponent} from './person-detail/person-detail.component';
+import { PersonEditorComponent} from './person-editor/person-editor.component';
+
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/default-comp', pathMatch: 'full' },
@@ -14,6 +16,7 @@ const routes: Routes = [
 	{ path: "comp-bob", component: CompBobComponent},
 	{ path: "comp-joe", component: CompJoeComponent},
 	{ path: 'detail/:id', component: PersonDetailComponent },
+	{ path: 'editor/:id', component: PersonEditorComponent },
 ];
 
 @NgModule({
