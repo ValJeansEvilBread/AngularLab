@@ -1,10 +1,10 @@
 
-<form [formGroup]="profileForm"  (ngSubmit)="onSubmit()">
+<form [formGroup]="personForm"  (ngSubmit)="onSubmit()">
 	<label>
 	  Name:
 	  <input type="text" formControlName="name" required>
 	</label>
-	<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+	<button type="submit" [disabled]="!personForm.valid">Submit</button>
 </form>
 
 <p>

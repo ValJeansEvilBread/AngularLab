@@ -1,7 +1,7 @@
-import { Component, } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { FormGroup, FormControl } from '@angular/forms';
 
 
 import { Person }         from '../person';
@@ -13,22 +13,25 @@ import { PersonServiceService }  from '../person-service.service';
   templateUrl: './person-editor.component.html',
   styleUrls: ['./person-editor.component.css']
 })
-export class PersonEditorComponent {
 
-  profileForm =  this.fb.group({
+export class PersonEditorComponent implements OnInit {
+
+  constructor(private builder: FormBuilder) { }
+
+  personForm =  this.builder.group({
     name: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) { }
+  ngOnInit() { }
 
   updatePerson() {
-    this.profileForm.patchValue({
+    this.personForm.patchValue({
       name: '',
     })
   };
 
-  onSubmit() {
-    console.warn(this.profileForm.value);
+  onSubmit() { 
+  	console.log(this.personForm.controls["name"].value);
   }
 
 
